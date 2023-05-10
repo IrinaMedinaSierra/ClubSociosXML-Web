@@ -9,7 +9,15 @@
 <body>
 	<h1>Club de Socios Web</h1>
 	
-	<form action="ControllerWeb" method="post" >
+	<form action="ControllerWeb" method="post"  enctype="multipart/form-data">
+	
+	<label for="archivo">Archivo XML</label>
+	<input type="file" accept=".xml" name="archivo" id="archivo">
+	
+	<input type="submit" name="enviar" value="enviar">
+	
+	
+	
 	
 	
 	
