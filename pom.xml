@@ -1,0 +1,72 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.cursoceat</groupId>
+  <artifactId>ClubDeSociosXML</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <build>
+	  <plugins>
+		  <!--Plugin para cambiar a la version J2SE1.7  -->
+		  <plugin>
+		  <groupId>org.apache.maven.plugins</groupId>
+		  <artifactId>maven-compiler-plugin</artifactId>
+		  <version>3.11.0</version>
+		  <configuration>
+			  <source>1.7</source>
+			  <target>1.7</target>
+		  </configuration>
+	  </plugin>
+	        <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>jaxb2-maven-plugin</artifactId>
+            <version>3.1.0</version>
+            <executions>
+                <execution>
+                    <id>xjc</id>
+                    <goals>
+                        <goal>xjc</goal>
+                    </goals>
+                </execution>
+            </executions>
+            <configuration>
+                <!-- Indicamos el paquete donde se va a crear el Schema -->
+                <packageName>com.cursoceat.xml.schema</packageName>
+
+                <!-- Indicamos el tipo de entrada que vamos a cargar para generar el schema -->
+                <sourceType>xmlschema</sourceType>
+
+                <!-- Indicamos la ruta donde se guardara la generación a partir del cual se generar el schema -->
+                <sources>
+                    <source>src/main/resources</source>
+                </sources>
+            </configuration>
+        </plugin> 
+          
+	  </plugins>
+  </build>
+  <dependencies>
+	<dependency>
+		<groupId>org.codehaus.mojo</groupId>
+		<artifactId>jaxb2-maven-plugin</artifactId>
+		<version>3.1.0</version>
+	</dependency>
+	<dependency>
+		<groupId>junit</groupId>
+		<artifactId>junit</artifactId>
+		<version>4.13.2</version>
+		<scope>test</scope>		
+	</dependency>  
+	<dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>4.0.1</version>
+            <scope>provided</scope>
+        </dependency>  
+        
+        <!-- https://mvnrepository.com/artifact/taglibs/standard -->
+	<dependency>
+	    <groupId>taglibs</groupId>
+	    <artifactId>standard</artifactId>
+	    <version>1.1.2</version>
+	</dependency>
+  </dependencies>
+</project>
