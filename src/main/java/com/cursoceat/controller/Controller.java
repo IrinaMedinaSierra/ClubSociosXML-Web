@@ -50,21 +50,21 @@ public class Controller {
 		Club miclub=new Club();
 		
 		Socio socio1=new Socio();
-		socio1.setIdSocio(1);
+		//socio1.setIdSocio(1);
 		socio1.setNombreSocio("Victoria Sevilla");
 		socio1.setDireccion("Calle Amparo,15");
 		socio1.setFechaAlta("01-01-2020");
 		miclub.getSocio().add(socio1);
 		
 		Socio socio2=new Socio();
-		socio2.setIdSocio(2);
+		//socio2.setIdSocio(2);
 		socio2.setNombreSocio("Monica");
 		socio2.setDireccion("Don Victor,185");
 		socio2.setFechaAlta("15-05-2021");
 		miclub.getSocio().add(socio2);
 		
 		Socio socio3=new Socio();
-		socio3.setIdSocio(3);
+	//	socio3.setIdSocio(3);
 		socio3.setNombreSocio("Azucena");
 		socio3.setDireccion("Argamasilla,57");
 		socio3.setFechaAlta("28-07-2019");
